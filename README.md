@@ -29,3 +29,11 @@ npm -v
 #### IMPORTANTE!!
 
 Ver si o si este video. [Youtube](https://www.youtube.com/watch?v=7hHUnYDr9kQ).
+
+## Descargar App responsiva
+
+https://responsively.app/download
+
+## App para colores, mediciones etc.
+
+https://learn.microsoft.com/es-es/windows/powertoys/
