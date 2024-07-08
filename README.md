@@ -21,3 +21,11 @@ Para verificar que Node.js y npm (Node Package Manager) se instalaron correctame
 node -v
 npm -v
 
+
+```
+
+## Tutorial para que se familiarice con tailwindcss
+
+#### IMPORTANTE!!
+
+Ver si o si este video. [Youtube](https://www.youtube.com/watch?v=7hHUnYDr9kQ).
