@@ -12,78 +12,77 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="./js/tailwind.js"></script>
   <script src="./js/tailwindConfig.js"></script>
-
-
 </head>
 
 <body class="w-full min-h-screen m-auto bg-general">
   <!-- navbar goes here -->
-  <header>
-    <nav class="border-b bg-transparent fixed w-full top-0 backdrop-blur-md z-50">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between">
+  <header class="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-lg text-gray-200 z-50">
+    <nav class="p-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center pl-8 gap-3">
+          <i class="fa-solid fa-gun text-2xl"></i>
+          <h1 class="font-serif tracking-wide font-bold text-xl ">Página do Internet</h1>
+        </div>
 
-          <div class="flex space-x-10">
-            <!-- logo -->
-            <div>
-              <a href="#"
-                class="flex items-center text-xl font-bold py-5 px-2 text-white gap-2 hover:text-purple-600 hover:text-2xl transition-all duration-300 ease-out">
-                <i class="fa-solid fa-futbol"></i>
-                <span>titulo pagina</span>
-              </a>
-            </div>
+        <!-- MOBILE NAV ICON -->
+        <div class="md:hidden block absolute top-4 right-8">
+          <button aria-label="navigation" type="button"
+            class="text-gray-200 transition duration-300 focus:outline-none focus:text-white hover:text-white">
+            <i class="fas fa-bars text-3xl" id="bars"></i>
+          </button>
+        </div>
 
-            <!-- primary nav -->
-            <div class="hidden md:flex items-center justify-center text-center space-x-1">
-              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 1</a>
-              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 2</a>
-              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 3</a>
-              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 4</a>
-            </div>
-          </div>
+        <!-- NAVIGATION - LARGE SCREENS -->
+        <div class="hidden md:flex">
+          <ul class="flex">
+            <li class="text-lg pr-8"><a href="#"
+                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                style="text-underline-offset: 8px;">Lar</a></li>
+            <li class="text-lg pr-8"><a href="#"
+                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                style="text-underline-offset: 8px;">jogadores</a></li>
+            <li class="text-lg pr-8"><a href="#"
+                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                style="text-underline-offset: 8px;">cantores</a></li>
+            <li class="text-lg pr-8"><a href="#"
+                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                style="text-underline-offset: 8px;">motocicletas</a></li>
+          </ul>
+        </div>
 
-          <!-- secondary nav -->
-          <div class="hidden md:flex items-center space-x-1">
-            <a href="" class="py-5 px-3">Login</a>
-            <a href=""
-              class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signup</a>
-          </div>
-
-          <!-- mobile button goes here -->
-          <div class="md:hidden flex items-center">
-            <button class="mobile-menu-button">
-              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+        <div class="hidden md:flex gap-5 text-2xl mr-3">
+          <a href="#"><i class="fa-solid fa-right-to-bracket "></i></a>
+          <a href="#"> <i class="fa-solid fa-ghost "></i></a>
 
         </div>
       </div>
 
-      <!-- mobile menu -->
-      <div class="mobile-menu md:hidden flex flex-col justify-center items-center">
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Menú 1</a>
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Menú 2</a>
+      <!-- MOBILE MENU -->
+      <div id="mobileMenu" class="hidden w-full mx-auto py-8 text-center ">
+        <div class="flex flex-col justify-center items-center w-full">
+          <a href="#"
+            class="block text-gray-200 cursor-pointer py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+            style="text-underline-offset: 8px;">Lar</a>
+          <a href="#"
+            class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+            style="text-underline-offset: 8px;">Jogadores</a>
+          <a href="#"
+            class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-blue-500 focus:underline hover:underline hover:text-yellow-500"
+            style="text-underline-offset: 8px;">cantores</a>
+          <a href="#"
+            class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-hover_principal focus:underline hover:underline hover:text-hover_principal"
+            style="text-underline-offset: 8px;">motocicletas</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main class="pt-20">
     <!-- content goes here -->
-    <div class="py-32 m-2 text-center border-x border-b text-white ">
+    <div class="py-32 m-2 text-center border text-white">
       <h2 class="font-extrabold text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
         consequuntur modi delectus?</h2>
     </div>
-    <div>
-      <figure class="w-64">
-        <img src="assets/prueba1.JPG" alt="">
-      </figure>
-    </div>
-
-
-
   </main>
 
   <script src="js/main.js" defer></script>
@@ -91,3 +90,16 @@
 </body>
 
 </html>
+
+
+<!-- 1. *#362949* - Color base (Azul oscuro)
+2. *#D4A5A5* - Rosa empolvado
+3. *#D9BF77* - Dorado suave
+4. *#FFC857* - Amarillo mostaza
+5. *#119DA4* - Verde azulado
+6. *#56CBF9* - Azul celeste
+7. *#7A9E9F* - Verde grisáceo
+8. *#9A8C98* - Lila grisáceo
+9. *#FF6F61* - Coral
+10. *#FFFFFF* - Blanco
+ -->

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Project</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/tailwind.js"></script>
+    <script src="./js/tailwindConfig.js"></script>
+</head>
+
+<body class="w-full min-h-screen m-auto bg-general">
+    <!-- navbar goes here -->
+    <header class="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-lg text-gray-200 z-50">
+        <nav class="p-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center pl-8">
+                    <i class="text-2xl fas fa-campground"></i>
+                    <h1 class="font-serif tracking-wide font-bold text-xl pl-4">Brand</h1>
+                </div>
+
+                <!-- MOBILE NAV ICON -->
+                <div class="md:hidden block absolute top-4 right-8">
+                    <button aria-label="navigation" type="button"
+                        class="text-gray-200 transition duration-300 focus:outline-none focus:text-white hover:text-white">
+                        <i class="fas fa-bars text-3xl" id="bars"></i>
+                    </button>
+                </div>
+
+                <!-- NAVIGATION - LARGE SCREENS -->
+                <div class="hidden md:flex">
+                    <ul class="flex">
+                        <li class="text-lg pr-8"><a href="#"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">Home</a></li>
+                        <li class="text-lg pr-8"><a href="#"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">About</a></li>
+                        <li class="text-lg pr-8"><a href="#"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">Blog</a></li>
+                        <li class="text-lg pr-8"><a href="#"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#"><i
+                            class="fab fa-facebook text-2xl pr-8 transition duration-300 focus:text-yellow-500 hover:text-yellow-500"></i></a>
+                    <a href="#"><i
+                            class="fab fa-linkedin text-2xl pr-8 transition duration-300 focus:text-yellow-500 hover:text-yellow-500"></i></a>
+                    <a href="#"><i
+                            class="fab fa-instagram text-2xl pr-8 transition duration-300 focus:text-yellow-500 hover:text-yellow-500"></i></a>
+                    <a href="#"><i
+                            class="fab fa-twitter text-2xl pr-8 transition duration-300 focus:text-yellow-500 hover:text-yellow-500"></i></a>
+                </div>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div id="mobileMenu" class="hidden w-full mx-auto py-8 text-center bg-gray-800">
+                <div class="flex flex-col justify-center items-center w-full">
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">Home</a>
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">About</a>
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">Blog</a>
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- content goes here -->
+        <div class="py-32 m-2 text-center border-x border-b text-white">
+            <h2 class="font-extrabold text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+                consequuntur modi delectus?</h2>
+        </div>
+    </main>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/nav.js" defer></script>
+</body>
+
+</html>

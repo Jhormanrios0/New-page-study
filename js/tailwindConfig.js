@@ -4,6 +4,7 @@ tailwind.config = {
     extend: {
       colors: {
         Blue_gov: "#3D6BB1",
+        hover_principal: "#362949",
       },
       height: {
         400: "400px",
