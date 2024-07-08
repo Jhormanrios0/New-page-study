@@ -1,5 +1,4 @@
-//Configuración de colores generales
-
+// tailwind.config.js
 tailwind.config = {
   theme: {
     extend: {
@@ -26,6 +25,10 @@ tailwind.config = {
       spacing: {
         "20px": "20px",
       },
+      backdropBlur: {
+        md: "10px",
+      },
     },
   },
+  plugins: [],
 };

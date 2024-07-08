@@ -16,26 +16,29 @@
 
 </head>
 
-<body class="w-full min-h-screen m-auto">
+<body class="w-full min-h-screen m-auto bg-general">
   <!-- navbar goes here -->
   <header>
-    <nav class="bg-gray-100">
+    <nav class="border-b bg-transparent fixed w-full top-0 backdrop-blur-md z-50">
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between">
 
-          <div class="flex space-x-4">
+          <div class="flex space-x-10">
             <!-- logo -->
             <div>
-              <a href="#" class="flex items-center py-5 px-2 text-gray-700 gap-2 hover:text-purple-600">
-                <i class="fa-solid fa-futbol text-xl"></i>
-                <span class="font-bold">titulo pagina</span>
+              <a href="#"
+                class="flex items-center text-xl font-bold py-5 px-2 text-white gap-2 hover:text-purple-600 hover:text-2xl transition-all duration-300 ease-out">
+                <i class="fa-solid fa-futbol"></i>
+                <span>titulo pagina</span>
               </a>
             </div>
 
             <!-- primary nav -->
-            <div class="hidden md:flex items-center space-x-1">
-              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Features</a>
-              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Pricing</a>
+            <div class="hidden md:flex items-center justify-center text-center space-x-1">
+              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 1</a>
+              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 2</a>
+              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 3</a>
+              <a href="#" class="py-5 px-3 text-white hover:text-gray-900">Menú 4</a>
             </div>
           </div>
 
@@ -60,18 +63,28 @@
       </div>
 
       <!-- mobile menu -->
-      <div class="mobile-menu hidden md:hidden">
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Features</a>
-        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</a>
+      <div class="mobile-menu md:hidden flex flex-col justify-center items-center">
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Menú 1</a>
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Menú 2</a>
       </div>
     </nav>
   </header>
 
+  <main>
+    <!-- content goes here -->
+    <div class="py-32 m-2 text-center border-x border-b text-white ">
+      <h2 class="font-extrabold text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+        consequuntur modi delectus?</h2>
+    </div>
+    <div>
+      <figure class="w-64">
+        <img src="assets/prueba1.JPG" alt="">
+      </figure>
+    </div>
 
-  <!-- content goes here -->
-  <div class="py-32 text-center">
-    <h2 class="font-extrabold text-4xl">Navbars in Tailwind!</h2>
-  </div>
+
+
+  </main>
 
   <script src="js/main.js" defer></script>
   <script src="js/nav.js" defer></script>
