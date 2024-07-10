@@ -34,11 +34,13 @@ document.addEventListener("click", function (event) {
 
 $(document).ready(function () {
   $(".slider__home").slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -56,16 +58,6 @@ $(document).ready(function () {
           slidesToScroll: 1,
         },
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ],
   });
 });
