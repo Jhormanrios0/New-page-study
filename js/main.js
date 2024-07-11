@@ -41,6 +41,10 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
     dots: true,
     arrows: true,
+    centerMode: true, // Añadido para centrar el slide activo
+    centerPadding: "0", // Para evitar espacios alrededor del slide activo
+    speed: 500, // Velocidad de la transición en milisegundos
+    cssEase: "ease-in-out", // Tipo de animación
     responsive: [
       {
         breakpoint: 1024,
