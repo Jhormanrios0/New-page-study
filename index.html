@@ -10,8 +10,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <script src="./js/tailwind.js"></script>
   <script src="./js/tailwindConfig.js"></script>
+  <link rel="stylesheet" href="https://daneden.github.lo/animate.css/animate.min.css">
 </head>
 
 <body class="w-full min-h-screen m-auto bg-general">
@@ -51,9 +54,8 @@
         </div>
 
         <div class="hidden md:flex gap-5 text-2xl mr-3">
-          <a href="#"><i class="fa-solid fa-right-to-bracket "></i></a>
-          <a href="#"> <i class="fa-solid fa-ghost "></i></a>
-
+          <a href="#" id="loginBtn"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <a href="#" id="registerBtn"><i class="fa-solid fa-ghost"></i></a>
         </div>
       </div>
 
@@ -77,29 +79,133 @@
     </nav>
   </header>
 
+  <!-- Login Modal -->
+  <section id="loginModal" class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+      <h2 class="text-2xl font-bold mb-4">Iniciar sesión</h2>
+      <form>
+        <div class="mb-4">
+          <label for="login-username" class="block text-gray-700">Usuario</label>
+          <input type="text" id="login-username" class="w-full px-3 py-2 border rounded-lg">
+        </div>
+        <div class="mb-4">
+          <label for="login-password" class="block text-gray-700">Contraseña</label>
+          <input type="password" id="login-password" class="w-full px-3 py-2 border rounded-lg">
+        </div>
+        <div class="flex justify-between items-center">
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Entrar</button>
+          <button type="button" id="closeLoginModal" class="text-gray-500 hover:text-gray-700">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Register Modal -->
+  <section id="registerModal"
+    class="wow animate__jackInTheBox hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+      <h2 class="text-2xl font-bold mb-4">Registrarse</h2>
+      <form>
+        <div class="mb-4">
+          <label for="register-username" class="block text-gray-700">Usuario</label>
+          <input type="text" id="register-username" class="w-full px-3 py-2 border rounded-lg">
+        </div>
+        <div class="mb-4">
+          <label for="register-email" class="block text-gray-700">Email</label>
+          <input type="email" id="register-email" class="w-full px-3 py-2 border rounded-lg">
+        </div>
+        <div class="mb-4">
+          <label for="register-password" class="block text-gray-700">Contraseña</label>
+          <input type="password" id="register-password" class="w-full px-3 py-2 border rounded-lg">
+        </div>
+        <div class="flex justify-between items-center">
+          <button type="submit"
+            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Registrarse</button>
+          <button type="button" id="closeRegisterModal" class="text-gray-500 hover:text-gray-700">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- START MAIN -->
   <main class="pt-20">
     <!-- content goes here -->
-    <div class="py-32 m-2 text-center border text-white">
-      <h2 class="font-extrabold text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
-        consequuntur modi delectus?</h2>
-    </div>
+    <!-- START SLIDER -->
+    <section class="max-w-7xl mx-auto py-20">
+      <div class="flex flex-wrap justify-center text-white gap-10 bg-transparent slider__home">
+        <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+          <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+          <div class="relative z-10">
+            <img src="./assets/cards/Neymar Jr.png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg" alt="Card Image">
+            <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+              consectetur
+              adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+          </div>
+        </div>
+        <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+          <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+          <div class="relative z-10">
+            <img src="./assets/cards/Rodrygo.png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg" alt="Card Image">
+            <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+              consectetur
+              adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+          </div>
+        </div>
+        <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+          <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+          <div class="relative z-10">
+            <img src="./assets/cards/Ronaldinho.png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg" alt="Card Image">
+            <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+              consectetur
+              adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+          </div>
+        </div>
+        <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+          <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+          <div class="relative z-10">
+            <img src="./assets/cards/Vinícius Jr..png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg" alt="Card Image">
+            <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+              consectetur
+              adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+          </div>
+        </div>
+        <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+          <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+          <div class="relative z-10">
+            <img src="./assets/cards/EderMilitaö.webp" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg" alt="Card Image">
+            <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+              consectetur
+              adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+          </div>
+        </div>
+        <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+          <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+          <div class="relative z-10">
+            <img src="./assets/cards/Kaka.webp" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg" alt="Card Image">
+            <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+              consectetur
+              adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class=" border border-red-500 py-9 flex flex-col items-center justify-center text-center text-white text-3xl container max-w-7xl mx-auto ">
+      <h2>HOLI</h2>
+    </section>
+
+    <!-- END SLIDER -->
+
   </main>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="js/main.js" defer></script>
   <script src="js/nav.js" defer></script>
+  <script src="https://wowjs.uk/dist/wow.min.js">
+    new WOW().init();
+  </script>
 </body>
 
 </html>
-
-
-<!-- 1. *#362949* - Color base (Azul oscuro)
-2. *#D4A5A5* - Rosa empolvado
-3. *#D9BF77* - Dorado suave
-4. *#FFC857* - Amarillo mostaza
-5. *#119DA4* - Verde azulado
-6. *#56CBF9* - Azul celeste
-7. *#7A9E9F* - Verde grisáceo
-8. *#9A8C98* - Lila grisáceo
-9. *#FF6F61* - Coral
-10. *#FFFFFF* - Blanco
- -->
