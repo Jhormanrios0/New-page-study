@@ -21,7 +21,7 @@ document.getElementById("registerBtn").addEventListener("click", function () {
   const modalContent = document.getElementById("modalContent");
   modal.classList.remove("hidden");
   modalContent.classList.remove("animate__bounceOutRight");
-  modalContent.classList.add("animate_animated", "animate_bounceInLeft");  
+  modalContent.classList.add("animate_animated", "animate_bounceInLeft");
 });
 
 // Cerrar el modal con animación de salida al hacer clic en "Cancelar"
