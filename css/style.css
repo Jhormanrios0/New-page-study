@@ -23,3 +23,8 @@ body {
   border-radius: 2rem;
   box-shadow: 3px;
 }
+
+.elemento1 {
+  animation: bounceInLeft;
+  animation-duration: 1s;
+}
