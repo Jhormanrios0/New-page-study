@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogadores</title>
+    <script src="../js/tailwind.js"></script>
+    <script src="../js/tailwindConfig.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+
+<body class="body__jogadores">
+    <header class="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-lg text-gray-200 z-50">
+        <nav class="p-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center pl-8 gap-3">
+                    <i class="fa-solid fa-gun text-2xl"></i>
+                    <h1 class="font-serif tracking-wide font-bold text-xl ">Página do Internet</h1>
+                </div>
+
+                <!-- MOBILE NAV ICON -->
+                <div class="md:hidden block absolute top-4 right-8">
+                    <button aria-label="navigation" type="button"
+                        class="text-gray-200 transition duration-300 focus:outline-none focus:text-white hover:text-white">
+                        <i class="fas fa-bars text-3xl" id="bars"></i>
+                    </button>
+                </div>
+
+                <!-- NAVIGATION - LARGE SCREENS -->
+                <div class="hidden md:flex">
+                    <ul class="flex">
+                        <li class="text-lg pr-8"><a href="../index.html"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">Lar</a></li>
+                        <li class="text-lg pr-8"><a href="../pages/jogadores.html"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">jogadores</a></li>
+                        <li class="text-lg pr-8"><a href="../pages/cantores.html"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">cantores</a></li>
+                        <li class="text-lg pr-8"><a href="../pages/motocicletas.html"
+                                class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                                style="text-underline-offset: 8px;">motocicletas</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden md:flex gap-5 text-2xl mr-3">
+                    <a href="#" id="loginBtn"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#" id="registerBtn"><i class="fa-solid fa-ghost"></i></a>
+                </div>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div id="mobileMenu" class="hidden w-full mx-auto py-8 text-center ">
+                <div class="flex flex-col justify-center items-center w-full">
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">Lar</a>
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">Jogadores</a>
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-blue-500 focus:underline hover:underline hover:text-yellow-500"
+                        style="text-underline-offset: 8px;">cantores</a>
+                    <a href="#"
+                        class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-hover_principal focus:underline hover:underline hover:text-hover_principal"
+                        style="text-underline-offset: 8px;">motocicletas</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <section id="loginModal" class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+            <h2 class="text-2xl font-bold mb-4">Iniciar sesión</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="login-username" class="block text-gray-700">Usuario</label>
+                    <input type="text" id="login-username" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label for="login-password" class="block text-gray-700">Contraseña</label>
+                    <input type="password" id="login-password" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div class="flex justify-between items-center">
+                    <button type="submit"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Entrar</button>
+                    <button type="button" id="closeLoginModal"
+                        class="text-gray-500 hover:text-gray-700">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Register Modal -->
+    <section id="registerModal"
+        class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+        <div id="modalContent" class="elemento1 bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+            <h2 class="text-2xl font-bold mb-4">Registrarse</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="register-username" class="block text-gray-700">Usuario</label>
+                    <input type="text" id="register-username" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label for="register-email" class="block text-gray-700">Email</label>
+                    <input type="email" id="register-email" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label for="register-password" class="block text-gray-700">Contraseña</label>
+                    <input type="password" id="register-password" class="w-full px-3 py-2 border rounded-lg">
+                </div>
+                <div class="flex justify-between items-center">
+                    <button type="submit"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Registrarse</button>
+                    <button type="button" id="closeRegisterModal"
+                        class="text-gray-500 hover:text-gray-700">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- START MAIN -->
+    <main class="pt-20 ">
+        <!-- content goes here -->
+        <!-- START SLIDER -->
+        <section id="" class="max-w-7xl mx-auto py-20">
+            <div
+                class="flex flex-wrap animate__animated  animate__slideInDown justify-center text-white gap-10 bg-transparent slider__home">
+                <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+                    <div class="relative z-10">
+                        <img src="../assets/cards/Neymar Jr.png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg"
+                            alt="Card Image">
+                        <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+                    </div>
+                </div>
+                <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+                    <div class="relative z-10">
+                        <img src="../assets/cards/Rodrygo.png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg"
+                            alt="Card Image">
+                        <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+                    </div>
+                </div>
+                <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+                    <div class="relative z-10">
+                        <img src="../assets/cards/Ronaldinho.png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg"
+                            alt="Card Image">
+                        <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+                    </div>
+                </div>
+                <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+                    <div class="relative z-10">
+                        <img src="../assets/cards/Vinícius Jr..png" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg"
+                            alt="Card Image">
+                        <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+                    </div>
+                </div>
+                <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+                    <div class="relative z-10">
+                        <img src="../assets/cards/EderMilitaö.webp" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg"
+                            alt="Card Image">
+                        <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+                    </div>
+                </div>
+                <div class="relative p-4 text-center rounded-lg shadow-lg w-80 m-4">
+                    <div class="absolute inset-0 bg-black opacity-20 rounded-2xl"></div>
+                    <div class="relative z-10">
+                        <img src="../assets/cards/Kaka.webp" class="w-2/3 h-[300px] mx-auto mb-4 rounded-lg"
+                            alt="Card Image">
+                        <h2 class="font-extrabold bg-transparent rounded-md text-xl mb-2">Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Laboriosam consequuntur modi delectus?</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- END SLIDER -->
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</body>
+
+</html>
