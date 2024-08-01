@@ -15,22 +15,40 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Register Modal
+// Mostrar el modal con animación de entrada
 document.getElementById("registerBtn").addEventListener("click", function () {
-  document.getElementById("registerModal").classList.remove("hidden");
+  const modal = document.getElementById("registerModal");
+  const modalContent = document.getElementById("modalContent");
+  modal.classList.remove("hidden");
+  modalContent.classList.remove("animate__bounceOutRight");
+  modalContent.classList.add("animate_animated", "animate_bounceInLeft");
 });
 
+// Cerrar el modal con animación de salida al hacer clic en "Cancelar"
 document
   .getElementById("closeRegisterModal")
   .addEventListener("click", function () {
-    document.getElementById("registerModal").classList.add("hidden");
+    closeModal();
   });
 
 document.addEventListener("click", function (event) {
   if (event.target === document.getElementById("registerModal")) {
-    document.getElementById("registerModal").classList.add("hidden");
+    closeModal();
   }
 });
+
+function closeModal() {
+  const modal = document.getElementById("registerModal");
+  const modalContent = document.getElementById("modalContent");
+  modalContent.classList.remove("animate__bounceInLeft");
+  modalContent.classList.add("animate__bounceOutRight");
+
+  modalContent.addEventListener("animationend", function handleAnimationEnd() {
+    modal.classList.add("hidden");
+    modalContent.classList.remove("animate__bounceOutRight");
+    modalContent.removeEventListener("animationend", handleAnimationEnd);
+  });
+}
 
 $(document).ready(function () {
   $(".slider__home").slick({
