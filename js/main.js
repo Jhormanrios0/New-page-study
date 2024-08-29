@@ -15,16 +15,15 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Mostrar el modal con animación de entrada
+// Mostrar el modal de registro sin animación de cierre
 document.getElementById("registerBtn").addEventListener("click", function () {
   const modal = document.getElementById("registerModal");
   const modalContent = document.getElementById("modalContent");
   modal.classList.remove("hidden");
-  modalContent.classList.remove("animate__bounceOutRight");
-  modalContent.classList.add("animate_animated", "animate_bounceInLeft");
+  modalContent.classList.add("animate__animated", "animate__bounceInLeft");
 });
 
-// Cerrar el modal con animación de salida al hacer clic en "Cancelar"
+// Cerrar el modal de registro al hacer clic en "Cancelar" o fuera del modal
 document
   .getElementById("closeRegisterModal")
   .addEventListener("click", function () {
@@ -41,13 +40,7 @@ function closeModal() {
   const modal = document.getElementById("registerModal");
   const modalContent = document.getElementById("modalContent");
   modalContent.classList.remove("animate__bounceInLeft");
-  modalContent.classList.add("animate__bounceOutRight");
-
-  modalContent.addEventListener("animationend", function handleAnimationEnd() {
-    modal.classList.add("hidden");
-    modalContent.classList.remove("animate__bounceOutRight");
-    modalContent.removeEventListener("animationend", handleAnimationEnd);
-  });
+  modal.classList.add("hidden");
 }
 
 $(document).ready(function () {
